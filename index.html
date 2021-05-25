@@ -100,7 +100,6 @@
         height: 220px;
       }
       .mainButton{
-        position: absolute;
         left: 0;
         margin-left: 142px;
       }
@@ -109,22 +108,21 @@
         flex-direction: column;
       }
       .sectionLeft{
-        width: 375px;
+        width: 380px;
         height: 100px;
         padding-top: 50px;
       }
       .sectionMiddle{
-        width: 375px;
+        width: 380px;
         height: 100px;
         padding-top: 50px;
       }
       .sectionRight{
-        width: 375px;
+        width: 380px;
         height: 100px;
         padding-top: 50px;
       }
       #modal{
-        position: absolute;
         left: 65px;
         width:250px;
         font-weight: bold;
@@ -162,7 +160,7 @@
     var sectionRight = document.getElementById('sectionRight');
     var modal = document.getElementById('modal');
     var modalWrap = document.getElementById('modalWrap');
-    var items = ['운수좋음', '운수보통', '운수안좋음', '운수매우좋음', '운수매우안좋음 ', '그냥 볼 것도 없음', '생각보다 괜찮음', '차조심', '물조심', '얼굴조심', '운수 안좋은데 바지 벗고 춤추면 운수 좋아짐', '밥 먹다가 사래 걸림', '사랑받기 좋은 날'];
+    var items = ['운수 좋음', '운수 보통', '운수 안좋음', '운수 매우좋음', '운수 매우안좋음 ', '그냥 볼 것도 없음', '생각보다 괜찮음', '차조심', '물조심', '얼굴조심', '운수 안좋은데 바지 벗고 춤추면 운수 좋아짐', '밥 먹다가 사래 걸림', '사랑받기 좋은 날'];
     var result = items.length;
     var check = false;
     var buttonLeft = document.createElement('button');
@@ -185,17 +183,17 @@
       }
 
       buttonLeft.addEventListener('click', function(){
-        const rand_0_12 = Math.floor(Math.random() * result);
+        const rand_0_10 = Math.floor(Math.random() * result);
         modal.innerHTML = (items[rand_0_10]);
         modalWrap.classList.add('active')
       })
       buttonMiddle.addEventListener('click', function(){
-        const rand_0_12 = Math.floor(Math.random() * result);
+        const rand_0_10 = Math.floor(Math.random() * result);
         modal.innerHTML = (items[rand_0_10]);
         modalWrap.classList.add('active')
       })
       buttonRight.addEventListener('click', function(){
-        const rand_0_12 = Math.floor(Math.random() * result);
+        const rand_0_10 = Math.floor(Math.random() * result);
         modal.innerHTML = (items[rand_0_10]);
         modalWrap.classList.add('active')
       })
