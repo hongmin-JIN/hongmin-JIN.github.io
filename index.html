@@ -92,6 +92,48 @@
       border-radius: 15px;
       padding-top:30px;
     }
+    @media screen and (max-width: 1400px) {
+      .head{
+        width: 100%;
+      }
+      .header{
+        height: 220px;
+      }
+      .mainButton{
+        position: absolute;
+        left: 0;
+        margin-left: 142px;
+      }
+      .section{
+        display: flex;
+        flex-direction: column;
+      }
+      .sectionLeft{
+        width: 375px;
+        height: 100px;
+        padding-top: 50px;
+      }
+      .sectionMiddle{
+        width: 375px;
+        height: 100px;
+        padding-top: 50px;
+      }
+      .sectionRight{
+        width: 375px;
+        height: 100px;
+        padding-top: 50px;
+      }
+      #modal{
+        position: absolute;
+        left: 65px;
+        width:250px;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      .section button{
+        transform: none;
+      }
+    }
   </style>
 </head>
 <body>
@@ -120,13 +162,14 @@
     var sectionRight = document.getElementById('sectionRight');
     var modal = document.getElementById('modal');
     var modalWrap = document.getElementById('modalWrap');
-    var items = ['운수좋음', '운수보통', '운수안좋음', '운수매우좋음', '운수매우안좋음 ', '그냥 볼 것도 없음', '생각보다 괜찮음', '차조심', '물조심', '얼굴조심', '운수 안좋은데 바지 벗고 춤추면 운수 좋아짐', '밥 먹다가 사래 걸림'];
+    var items = ['운수좋음', '운수보통', '운수안좋음', '운수매우좋음', '운수매우안좋음 ', '그냥 볼 것도 없음', '생각보다 괜찮음', '차조심', '물조심', '얼굴조심', '운수 안좋은데 바지 벗고 춤추면 운수 좋아짐', '밥 먹다가 사래 걸림', '사랑받기 좋은 날'];
     var result = items.length;
     var check = false;
     var buttonLeft = document.createElement('button');
     var buttonMiddle = document.createElement('button');
     var buttonRight = document.createElement('button');
 
+    
     mainButton.addEventListener('click', function(){
       
       if(!check) {
@@ -142,17 +185,17 @@
       }
 
       buttonLeft.addEventListener('click', function(){
-        const rand_0_10 = Math.floor(Math.random() * result);
+        const rand_0_12 = Math.floor(Math.random() * result);
         modal.innerHTML = (items[rand_0_10]);
         modalWrap.classList.add('active')
       })
       buttonMiddle.addEventListener('click', function(){
-        const rand_0_10 = Math.floor(Math.random() * result);
+        const rand_0_12 = Math.floor(Math.random() * result);
         modal.innerHTML = (items[rand_0_10]);
         modalWrap.classList.add('active')
       })
       buttonRight.addEventListener('click', function(){
-        const rand_0_10 = Math.floor(Math.random() * result);
+        const rand_0_12 = Math.floor(Math.random() * result);
         modal.innerHTML = (items[rand_0_10]);
         modalWrap.classList.add('active')
       })
